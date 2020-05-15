@@ -46,3 +46,24 @@
         - .fruite li:last-child {
             color: red;
         }
+    - ntn child : E가 형제 요소 중 n번째 요소라면 선택
+        - .fruites li:ntn-child(2) {
+            color : red;
+        }
+        - .fruits li:ntn-child(2n) { // 짝수번째 요소들만 선택
+            color: red;
+        }
+        - .fruits li:ntn-child(n+3) { // 3번째 요소부터 이후 요소들을 선택
+            color: red;
+        }
+    - ntn of type : E의 타입(태그이름)과 동일한 타입인 형제 요소 중 E가 n번째 요소라면 선택
+        - .fruits p:ntn-of-type(1) {
+            color: red;
+        }
+        - .fruits .red:ntn-of-type(1) { // ntn_of_type: 태그 이름을 선택해야 한다.
+            color: red;
+        }
+    - not : S가 아닌 E 선택
+        - .fruits li:not(.strawberry) {
+            color: red;
+        }
