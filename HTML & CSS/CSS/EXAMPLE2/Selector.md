@@ -67,3 +67,16 @@
         - .fruits li:not(.strawberry) {
             color: red;
         }
+
+3. 가상 요소 선택자
+    - before : E 요소 내부의 앞에, 내용(content)을 삽입(content속성이 반드시 있어야 한다.)
+        - ul li::before {
+            content: "숫자";
+            font-weight: bold;
+            color: red;
+            margin-right: 20px;
+        }
+    - after : E 요소 내부의 뒤에, 내용(content)을 삽입(content속성이 반드시 있어야 한다.)
+        - ul li::after {
+            content: ".0";
+        }
