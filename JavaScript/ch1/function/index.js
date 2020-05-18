@@ -7,7 +7,7 @@ console.log(sum);
 /***************************************/
 function hello(name) {
     console.log('Hello, ' + name + "!");
-    return 'Hello ${name}!';
+    return `Hello ${name}!`;
 }
 
 const result = hello('velopert');
@@ -49,7 +49,7 @@ console.log(sum);
 
 /***************************************/
 const hello = (name) => {
-    console.log('Hello, ${name}!');
+    console.log(`Hello, ${name}!`);
 }
 hello('velopert');
 

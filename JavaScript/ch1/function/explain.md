@@ -14,7 +14,7 @@ function hello(name) {
     - 화살표 함수에서 'this'와 그냥 함수에서의 'this'는 다른 개념이다.
 ```JavaScript
 const hello = (name) => {
-    console.log('Hello, ${name}!');
+    console.log(`Hello, ${name}!`);
 }
 
 const add = (a, b) => a + b;
