@@ -170,7 +170,7 @@ console.log(arr2);
 console.log(concated);
 ```
 
-join : 배열을 문자열로 반환한다.
+join : 배열을 특정 구분자(seperator)을 사용해서 문자열로 반환한다.
 ```JavaScript
 const array = [1,2,3,4,5];
 console.log(array.join());
