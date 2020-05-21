@@ -107,3 +107,20 @@ const todos = [
 const tasksNotDone = todos.filter(todo => todo.doen);
 console.log(tasksNotDone);
 ```
+
+- splice : 배열에서 특정 항목을 제거하는데 사용한다.(제거하는 과정에서 제거하려는 항목을 지정해줘야 한다.)
+```JavaScript
+const numbers = [10,20,30,40];
+const index = numbers.indexOf(30);
+const spliced = numbers.splice(index, 2);
+console.log(spliced)
+console.log(numbers);
+```
+
+- slice : 배열을 잘라낼 때 사용한다.(기존의 배열을 건드리지 않는다.)
+```JavaScript
+const numbers = [10,20,30,40];
+const sliced = numbers.slice(0,2);
+console.log(sliced);
+console.log(numbers);
+```
