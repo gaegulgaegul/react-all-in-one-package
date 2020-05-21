@@ -124,3 +124,56 @@ const sliced = numbers.slice(0,2);
 console.log(sliced);
 console.log(numbers);
 ```
+
+- shift : 첫번째 원소를 하나씩 추출한다.(기존의 배열을 수정하게 된다.)
+```JavaScript
+const numbers = [10,20,30,40];
+
+const value = numbers.shift();
+console.log(value);
+console.log(numbers);
+```
+
+pop : 마지막 요소를 하나씩 추출한다.(기존의 배열을 수정하게 된다.)
+```JavaScript
+const numbers = [10,20,30,40];
+
+const value = numbers.pop();
+console.log(value);
+console.log(numbers);
+```
+
+unshift : 배열 첫번째에 요소를 추가한다.
+```JavaScript
+const numbers = [10,20,30,40];
+
+numbers.unshift(50);
+console.log(numbers);
+```
+
+push : 배열 마지막에 요소를 추가한다.
+```JavaScript
+const numbers = [10,20,30,40];
+
+numbers.push(50);
+console.log(numbers);
+```
+
+concat : 여러 개의 배열을 하나의 배열로 합친다.(기존의 배열을 건드리지 않는다.)
+```JavaScript
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+
+const concated = arr1.concat(arr2);
+console.log(arr1);
+console.log(arr2);
+console.log(concated);
+```
+
+join : 배열을 문자열로 반환한다.
+```JavaScript
+const array = [1,2,3,4,5];
+console.log(array.join());
+console.log(array.join(' '));
+console.log(array.join(', '))
+```
