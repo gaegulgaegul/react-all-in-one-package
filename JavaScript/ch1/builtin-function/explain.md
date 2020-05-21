@@ -175,5 +175,18 @@ join : 배열을 문자열로 반환한다.
 const array = [1,2,3,4,5];
 console.log(array.join());
 console.log(array.join(' '));
-console.log(array.join(', '))
+console.log(array.join(', '));
+```
+
+reduce : 배열 안의 모든 값을 사용하여 어떠한 값을 연산할 때 사용한다.
+```JavaScript
+const numbers = [1,2,3,4,5];
+
+let avg = numbers.reduce((accumulator, current, index, array) => {
+    if(index === array.length - 1) {
+        return (accumulator + current) / array.length;
+    }
+    return accumulator + current;
+}, 0);
+console.log(avg);
 ```
