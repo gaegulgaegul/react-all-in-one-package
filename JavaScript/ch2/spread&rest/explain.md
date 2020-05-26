@@ -75,3 +75,21 @@ function sum(...rest) {
 
 console.log(sum(1,2,3,4,5,6,7));
 ```
+
+- 함수 인자에서 spread : 가변인자를 받아 배열로 만들어 사용한다.
+```JavaScript
+function subtract(x, y) {
+    return x - y;
+}
+const numbers = [1,2]
+const result = subtract(...numbers);
+console.log(result);
+
+/********************************************/
+function sum(...rest) {
+    return rest.reduce((acc, current) => acc + current, 0);
+}
+
+const result2 = sum(1,2,3,4,5,6,7);
+console.log(result2);
+```
