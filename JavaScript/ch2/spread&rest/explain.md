@@ -66,3 +66,12 @@ console.log(one);
 console.log(two);
 console.log(rest);
 ```
+
+- 함수 파라미터에서 rest : 함수 파라미터의 수가 몇개가 되든 배열로 받는다.
+```JavaScript
+function sum(...rest) {
+    return rest.reduce((acc, current) => acc + current, 0);
+}
+
+console.log(sum(1,2,3,4,5,6,7));
+```
