@@ -58,3 +58,30 @@ increaseAndPrint(0).then(increaseAndPrint)
     console.log(e)
 });
 ```
+
+- async/await : 비동기 처리를 하게 될때 프로미스 처리를 더 쉽게 해준다.
+```JavaScript
+function sleep(ms) {
+    return new Promise((resolve, reject) => setTimeout(resolve, ms));
+}
+
+async function makeError() {
+    await sleep(1000);
+    const error = new Error();
+    throw error;
+}
+
+async function process() {
+    console.log('안녕하세요!');
+    await sleep(1000);
+    console.log('반갑습니다!');
+
+    try {
+        await makeError();
+    } catch(e) {
+        console.error(e);
+    }
+}
+
+process();
+```
