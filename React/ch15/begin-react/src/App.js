@@ -1,4 +1,4 @@
-import React, { useRef, useState, useImperativeHandle } from 'react';
+import React, { useRef, useState } from 'react';
 import UserList from './UserList';
 import CreateUser from './CreateUser';
 

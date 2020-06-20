@@ -1,7 +1,13 @@
-import React, { useRef, useState } from 'react';
-import UserList from './UserList';
-import CreateUser from './CreateUser';
+## useMemo Hook
 
+- 성능을 최적화해야하는 상황에서 사용
+- 연산을 필요할 경우만 사용할 수 있도록 해준다.
+- App.js
+```JavaScript
+function countActiveUsers(users) {
+  console.log('활성 사용자 수를 세는 중...');
+  return users.filter(users => user.active).length;
+}
 function App() {
   const [inputs, setInputs] = useState({
     username: '',
@@ -66,6 +72,8 @@ function App() {
     ))
   };
 
+  const count = useMemo(() => countActiveUsers(users), [users]);
+
   return (
     <>
       <CreateUser
@@ -75,8 +83,8 @@ function App() {
         onCreate={onCreate}
       />
       <UserList users={users} onRemove={onRemove} onToggle={onToggle} />
+  <div>활성 사용자 수: {count}</div>
     </>
   );
 }
-
-export default App;
+```
