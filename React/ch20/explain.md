@@ -57,7 +57,7 @@ function reducer(state, action) {
     case 'TOGGLE_USER':
       return {
         ...state,
-        users: state.user.map(user => user.id === action.id ? { ...user, active: !user.active } : user)
+        users: state.users.map(user => user.id === action.id ? { ...user, active: !user.active } : user)
       };
     case 'REMOVE_USER':
       return {
