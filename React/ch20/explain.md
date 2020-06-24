@@ -46,7 +46,7 @@ function reducer(state, action) {
         ...state,
         inputs: {
           ...state.inputs,
-          [action.name]: action.name
+          [action.name]: action.value
         }
       };
     case 'CREATE_USER':
